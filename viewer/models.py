@@ -9,6 +9,7 @@ class content(models.Model):
     file = models.FileField(upload_to="content/")
     duration = models.DurationField(blank=10)
     specific_date = models.DateField(blank=True, null=True)
+    video = models.BooleanField(default=False)
 
     class Meta:
         pass

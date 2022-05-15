@@ -17,17 +17,28 @@
 <style type="text/css">
     img {
         overflow: hidden;
-        width: 1920px;
-        height: 1080px;
+        width: 3840px;
+        height: auto;
+    }
+    video {
+        overflow: hidden;
+        width: 3840px;
+        height: auto;
     }
 </style>
 
 
-<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+<div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
         {% for img in content %}
             <div class="carousel-item active">
-                <img src="/media/{{ img.file }}" class="d-block w-100" alt="...">
+                {% if img.video %}
+                    <video preload autoplay muted loop>
+                        <source id="video" src="/media/{{ img.file }}" type="video/mp4"/>
+                    </video>
+                {% elif not img.video %}
+                    <img src="/media/{{ img.file }}" class="d-block w-100" alt="something is broken lol imagine that">
+                {% endif %}
             </div>
         {% endfor %}
     </div>
@@ -36,6 +47,7 @@
 <script>
     const myCarouselElement = document.querySelector('#myCarousel')
     const carousel = new bootstrap.Carousel(myCarouselElement, {
-    interval: 5000,
+    interval: 7500,
+    pause: false,
     })
 </script>
