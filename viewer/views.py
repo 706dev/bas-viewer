@@ -1,5 +1,6 @@
 from django.views import generic
 from django.urls import reverse_lazy
+from django.shortcuts import render
 from . import models
 from . import forms
 
@@ -28,3 +29,7 @@ class contentUpdateView(generic.UpdateView):
 class contentDeleteView(generic.DeleteView):
     model = models.content
     success_url = reverse_lazy("viewer_content_list")
+
+def display(request):
+    context = {"content": models.content.objects.all()}
+    return render(request, "viewer/content_display.html", context)
