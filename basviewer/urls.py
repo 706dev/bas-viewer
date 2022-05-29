@@ -20,8 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='index.html'), name='index'),
-    path('viewer/', include('viewer.urls')),
+    path('', include('viewer.urls')),
     path('admin/', admin.site.urls),
 ]
 
