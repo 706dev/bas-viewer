@@ -1,5 +1,5 @@
 # BAS Viewer
-This project is made specifically to display images and videos on a BAS (big ass screen).
+This project is made specifically to display images and videos on a BAS (big ass screen, actually).
 
 ## Building Locally
 
