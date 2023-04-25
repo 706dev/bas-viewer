@@ -5,7 +5,7 @@ This project is made specifically to display images and videos on a BAS (big ass
 
 
 Information that is relevant to this Django app is in `docker-compose.yml`. 
-
+ 
 Variables you should definitely change:
  - `DJANGO_SUPERUSER_USERNAME`
  - `DJANGO_SUPERUSER_PASSWORD`
