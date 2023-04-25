@@ -3,6 +3,7 @@ This project is made specifically to display images and videos on a BAS (big ass
 
 ## Building Locally
 
+
 Information that is relevant to this Django app is in `docker-compose.yml`. 
 
 Variables you should definitely change:
